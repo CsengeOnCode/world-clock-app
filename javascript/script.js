@@ -1,32 +1,50 @@
 function updatetime() {
-  let losAngelesElemet = document.querySelector("#los-angeles");
-  if (losAngelesElemet) {
-    let losAngelesDateElemet = losAngelesElemet.querySelector(".date");
-    let losAngelesTimeElemet = losAngelesElemet.querySelector(".time");
+  let losAngelesElement = document.querySelector("#los-angeles");
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
     let losAngelesTime = moment().tz("America/Los_Angeles");
 
-    losAngelesDateElemet.innerHTML = moment().format("MMMM Do YYYY");
+    losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
 
-    losAngelesTimeElemet.innerHTML = losAngelesTime.format(
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-  let parisElemet = document.querySelector("#paris");
-  if (parisElemet) {
-    let parisDateElemet = parisElemet.querySelector(".date");
-    let parisTimeElemet = parisElemet.querySelector(".time");
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
     let parisTime = moment().tz("Europe/Paris");
 
-    parisDateElemet.innerHTML = moment().format("MMMM Do YYYY");
+    parisDateElement.innerHTML = moment().format("MMMM Do YYYY");
 
-    parisTimeElemet.innerHTML = parisTime.format(
-      "h:mm:ss [<small> ]A[</small>]"
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let singaporeElement = document.querySelector("#singapore");
+  if (singaporeElement) {
+    let singaporeDateElement = singaporeElement.querySelector(".date");
+    let singaporeTimeElement = singaporeElement.querySelector(".time");
+    let singaporeTime = moment().tz("Asia/Singapore");
+
+    singaporeDateElement.innerHTML = moment().format("MMMM Do YYYY");
+
+    singaporeTimeElement.innerHTML = singaporeTime.format(
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
