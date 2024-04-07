@@ -1,26 +1,27 @@
 body {
-  background: rgb(102, 191, 191, 0.4);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/122/350/original/earth-planet-front-side-back-41950.jpeg?1712524876");
+  background-repeat: no repeat;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
   max-width: 600px;
   margin: 60px auto;
   padding: 30px;
-  background-color: #fcfefe;
+  background-color: rgb(252, 254, 254, 0.8);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
 h1 {
   text-align: center;
-  color: #66bfbf;
+  color: #313d85;
   font-size: 40px;
 }
 
 select {
   display: block;
   margin: 20px auto;
-  width: 40%;
+  width: 50%;
   padding: 7px;
   border-radius: 4px;
   font-size: 17px;
@@ -34,7 +35,7 @@ select {
   justify-content: space-between;
   margin: 10px 0;
   padding: 10px 0 20px;
-  border-bottom: 1px dotted rgb(102, 191, 191, 0.8);
+  border-bottom: 1px dotted #313d85;
 }
 
 .city:last-child {
@@ -45,12 +46,12 @@ h2 {
   margin: 0;
   margin-bottom: 5px;
   font-size: 28px;
-  color: grey;
+  color: black;
 }
 
 .date {
-  opacity: 0.7;
-  color: #66bfbf;
+  color: #313d85;
+  font-weight: bold;
 }
 
 .time {
@@ -68,11 +69,13 @@ h2 {
 footer {
   text-align: center;
   margin: 20px;
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 12px;
+  color: white;
 }
 
 footer a {
-  color: #f78ba2;
+  color: #67a3a4;
   text-decoration: none;
+  font-weight: bold;
 }
